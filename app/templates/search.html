@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container margin-top-2">
+    <div class="row  mt-5">
+        <form class="form-inline col-md-12" action="" method="GET">
+            <div class="col-md-10 col-xs-12 ">
+                <input class="form-control" type="text" style="width: 100%;" name="q" placeholder="search a museum"
+                       value="{{ query }}" autofocus>
+            </div>
+            <div class="col-md-1 col-xs-6 center-block">
+                <button class="btn btn-default btn-primary btn-block" type="submit">
+                    <span class="fa fa-search" title="search"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="row col-md-12 mt-5">
+        <div class="container">
+            <div class="row">
+                <h1 class="col-md-9">Amsterdam Museum</h1>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Website</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--
+                    {% for item in museums %}
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>{{ item.name }}</td>
+                          <td><a href="{{ item.googlemap }}">google map</a></td>
+                          <td><a href="{{ item.website }}">website</a></td>
+                          <td>{{ item.short_description }} </td>
+                        </tr>
+                    {% endfor %}-->
+                    <tr>
+                        <td>Het Zuiderzeemuseum</td>
+                        <td><a href="http://maps.google.com/maps?q=52.7030600,5.2969760">google map</a></td>
+                        <td><a href="http://www.zuiderzeemuseum.nl">website</a></td>
+                        <td>In 1932 the Afsluitdijk (the IJsselmeer Barrier Dam) closed off the former Zuiderzee from the North Sea, and the two inland seas thus created were called the IJsselmeer and the Markermeer (meer is Dutch for ‘lake’). The Zuiderzee Museum is oriented toward the history, the current situation and the future of this area. It focuses upon the themes of water, crafts and communities. This story is visualized in the outdoor museum with historical buildings, and in the indoor museum with thematic exhibitions. Heritage, visual art, photography and design play an important role in this context.</td>
+                    </tr>
+                    <tr>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
